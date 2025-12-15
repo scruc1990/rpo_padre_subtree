@@ -1,18 +1,18 @@
 # Gestión de Repositorios con Git Subtree
 
-Este repositorio (`rpo_padre`) utiliza **`git subtree`** para integrar y gestionar el código de otros proyectos (hijos) en subdirectorios específicos. Esta técnica permite mantener el historial de *commits* de cada proyecto hijo separado y facilita la contribución bidireccional, manteniendo la unidad del repositorio principal.
+Este repositorio (`rpo_padre_subtree`) utiliza **`git subtree`** para integrar y gestionar el código de otros proyectos (hijos) en subdirectorios específicos. Esta técnica permite mantener el historial de *commits* de cada proyecto hijo separado y facilita la contribución bidireccional, manteniendo la unidad del repositorio principal.
 
 ## 1. Estructura de Repositorios
 
 | Nombre del Proyecto | Rol | URL Remota | Prefijo (Carpeta) | Remote Name (Alias) |
 | :--- | :--- | :--- | :--- | :--- |
-| `rpo_padre` | **Padre** (Este Repo) | `https://github.com/scruc1990/rpo_padre.git` | N/A | `origin` |
+| `rpo_padre_subtree` | **Padre** (Este Repo) | `https://github.com/scruc1990/rpo_padre_subtree.git` | N/A | `origin` |
 | `rpo_hijo_1` | Hijo Estándar | `https://github.com/scruc1990/rpo_hijo_1.git` | `hijo_1/` | `hijo1` |
 | `rpo_hijo_2_fork` | Hijo (Fork) | `https://github.com/Nest-ms-fh/rpo_hijo_2_fork.git` | `hijo_2/` | `hijo2` |
 
 ## 2. Configuración Inicial de Git Subtree
 
-Si estás configurando los *subtrees* por primera vez, sigue estos comandos desde la **raíz de `rpo_padre`** después de clonarlo:
+Si estás configurando los *subtrees* por primera vez, sigue estos comandos desde la **raíz de `rpo_padre_subtree`** después de clonarlo:
 
 ### 2.1. Integración de `rpo_hijo_1` (`hijo1`)
 
@@ -39,7 +39,7 @@ Si estás configurando los *subtrees* por primera vez, sigue estos comandos desd
 
 ## 3. Flujo de Trabajo y Sincronización
 
-Todos los comandos de `git subtree` **deben ejecutarse desde la raíz del repositorio padre** (`rpo_padre`).
+Todos los comandos de `git subtree` **deben ejecutarse desde la raíz del repositorio padre** (`rpo_padre_subtree`).
 
 ### 3.1. Traer Cambios del Hijo al Padre (`git subtree pull`)
 
